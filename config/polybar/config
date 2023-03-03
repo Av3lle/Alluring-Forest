@@ -1,0 +1,257 @@
+
+
+[colors]
+background = #2E3440
+background-alt = #ffffff
+foreground = #D8DEE9
+foreground-alt = #bf616a
+primary = #bf616a
+secondary = #bf616a
+alert = #bf616a
+
+[bar/example]
+width = 100%
+height = 27
+radius = 0
+fixed-center = false
+#202015
+background = #121411
+#background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 5
+line-color = #ffb700
+
+#border-size = 0
+border-color = #00000000
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = siji:pixelsize=10;1
+font-1 = JetBrainsMono-Bold Font:pixelsize=12;1
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;1
+font-3 = FontAwesome:pixelsize=14;1
+font-4 = JetBrainsMono-Bold Font:pixelsize=12;1
+font-5 = Font Awesome 6 Free:pixelsize=12;2
+font-6 = Font Awesome 6 Free Solid:pixelsize=12;2
+font-7 = Font Awesome 6 Brands:pixelsize=12;2
+
+
+modules-left = i3
+modules-right = backlight xkeyboard pulseaudio battery date network
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+#tray
+tray-position = center
+tray-padding = 0
+#tray-transparent = false
+tray-background = #121411
+tray-detached = true
+tray-maxsize = 19
+tray-scale = 0.97
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+fuzzy-match = true
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 0;
+
+
+#                
+
+pin-workspaces = true
+
+label-mode-padding = 4
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+label-focused = %icon%
+label-focused-foreground = #bca987
+label-focused-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+label-unfocused-foreground = #4c566a
+
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = "%Y-%m-%d"
+
+time = "%H:%M:%S"
+time-alt = %H:%M
+
+format-prefix =""
+format-prefix-foreground = #4c566a
+
+label =%date% %time%
+label-foreground = #bca987
+label-font = 0
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%%
+
+ramp-volume-0 =  
+ramp-volume-0-foreground = #4c566a
+ramp-volume-1 =  
+ramp-volume-1-foreground = #4c566a
+ramp-volume-2 =  
+ramp-volume-2-foreground = #4c566a
+
+label-muted = 🔇 muted
+label-muted-foreground = #666
+
+format-underline = ${colors.four}
+label-foreground = #d8dee9
+label-font = 1
+
+click-right = exec pavucontrol &
+
+[module/backlight]
+type = internal/backlight
+card = amdgpu_bl0
+
+use-actual-brightness = false
+enable-scroll = false
+
+format = <bar>
+
+label = %percentage%%
+
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+bar-width = 5
+bar-indicator = |
+bar-fill = ─
+bar-empty = ─
+
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+blacklist-1 = caps lock
+
+label-layout = %layout%
+label-layout-foreground = #d8dee9
+label-layout-background = #121411
+label-font = 4
+
+format-prefix = " "
+format-prefix-foreground = #4c566a
+
+[module/battery]
+type = internal/battery
+
+full-at = 99
+
+low-at = 5
+
+battery = BAT1
+adapter = ACAD
+
+poll-interval = 5
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+format-low = <label-low> <animation-low>
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+label-low = %percentage%%
+;label-full = Fully charged
+;label-low = BATTERY LOW
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+bar-capacity-width = 10
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 950
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-framerate = 500
+
+animation-low-0 = !
+animation-low-1 = 
+animation-low-framerate = 200
+
+[module/network]
+type = internal/network
+interface = wlp2s0
+interface-type = wireless
+
+interval = 4.0
+
+udspeed-minwidth = 5
+accumulate-stats = true
+unknown-as-up = true
+
+
+format-connected = <label-connected>
+label-connected = ^^
+label-connected-background = ${colors.bg}
+label-connected-foreground = ${colors.green}
+label-connected-padding = 1
+click-left = exec /home/avelle/.config/polybar/config/wifi.sh
+
+format-disconnected = <label-disconnected>
+label-disconnected = Offline
+label-disconnected-background = ${colors.bg}
+label-disconnected-foreground = ${colors.red}
+label-disconnected-padding = 1
+
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Открыть терминал</name>
+	<submenu></submenu>
+	<unique-id>1676037431015186-1</unique-id>
+	<command>alacritty</command>
+	<description>Пример особого действия</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>go-parent-folder</icon>
+	<name>Open as root</name>
+	<unique-id>1622790717174452-1</unique-id>
+	<command>~/.config/rofi/open_root/apps_as_root &apos;dbus-run-session thunar&apos;</command>
+	<description>Open directory as root</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>

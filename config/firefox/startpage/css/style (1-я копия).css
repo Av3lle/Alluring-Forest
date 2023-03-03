@@ -1,0 +1,47 @@
+@import url('http://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: monospace;
+  line-height: 1.5;
+  background-color: #1c1f20;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.block {
+  margin: 1em 1em;
+  padding: 1em 1em;
+  width: 10%;
+  background-color: #3d3f40;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid;
+  border-color: #b77839;
+}
+
+.title {
+  padding-bottom: 1em;
+  font-size: 25px;
+  font-weight: 700;
+  color: #bca987;
+  font-family: 'Ubuntu';
+}
+
+a {
+  color: #ccc;
+  text-decoration: none;
+}
