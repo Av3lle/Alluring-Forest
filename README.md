@@ -12,7 +12,7 @@ Here are the links where you can download the "Gruvbox" theme for OS Linux :>
 <h2>🍀 Installing configs 🍀</h2>
 <p>Clone my repository and go into the <b>config</b> folder. Then we move all the contents of this folder to <b>.config</b>. After these manipulations we reboot the system and see the result. If it works I congratulate you, well done :3</p>
 
-<h3>🌎 My packages that I install after completing the Arch Linux installation 🌎</h3>
+<h2 align="center">🌎 My packages that I install after completing the Arch Linux installation 🌎</h3>
 <p><b>Official repositories:</b></p>
 
 > sudo pacman -Syu xf86-video-amdgpu amdvlk lib32-amdvlk mesa-vdpau libva-mesa-driver lib32-libva-mesa-driver lib32-mesa-vdpau lib32-mesa
