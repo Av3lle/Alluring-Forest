@@ -117,7 +117,7 @@ outlineButtonBgOver: lightButtonBgOver;
 outlineButtonOutlineFg: windowBgActive;
 outlineButtonBgRipple: lightButtonBgRipple;
 menuBg: windowBg;
-menuBgOver: windowBgOver;
+menuBgOver: #4b4846;
 menuBgRipple: windowBgRipple;
 menuIconFg: fg2;
 menuIconFgOver: fg1;
