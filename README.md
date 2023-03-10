@@ -15,7 +15,7 @@ Here are the links where you can download the "Gruvbox" theme for OS Linux :>
 <h2 align="center">🌎 My packages that I install after completing the Arch Linux installation 🌎</h3>
 <p><b>Official repositories:</b></p>
 
-> sudo pacman -Syu xf86-video-amdgpu amdvlk lib32-amdvlk mesa-vdpau libva-mesa-driver lib32-libva-mesa-driver lib32-mesa-vdpau lib32-mesa
+> sudo pacman -Syu sudo pacman -S xf86-video-amdgpu amdvlk libva-mesa-driver mesa-vdpau lib32-amdvlk vulkan-icd-loader lib32-vulkan-icd-loader
 
 
 > sudo pacamn -S i3-gaps alacritty polybar nitrogen thunar picom okular dunst rofi code firefox mousepad viewnior hplip pavucontrol pipewire light scrot zsh wget
